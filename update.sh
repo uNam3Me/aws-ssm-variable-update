@@ -32,7 +32,7 @@ update_parameter () {
 
 #Compoare current variables in parameter store and updated file in git for changes
 diff_check () {
-	diff "$1" "$1-current"
+  diff "$1" "$1-current"
   if [ $? != 0 ]; then
     print_update_log "$1"
     update_parameter "$1"
